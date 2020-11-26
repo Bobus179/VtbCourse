@@ -1,15 +1,11 @@
 package Animals;
 
-public class Tiger extends Animal {
+public class Tiger extends Cat {
 
     static private int count;
-    {
-        runLimit=1000;
-        swimLimit=300;
-    }
 
-    public Tiger(String name) {
-        super("Tiger", name);
+    public Tiger(String name, int runLimit, int swimLimit) {
+        super("Tiger", name, runLimit, swimLimit);
         count++;
     }
 

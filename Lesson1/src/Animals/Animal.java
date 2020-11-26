@@ -12,10 +12,12 @@ public abstract class Animal {
     protected int runLimit;
     protected int swimLimit;
 
-    public Animal(String type, String name) {
+    public Animal(String type, String name, int runLimit, int swimLimit) {
         count++;
         this.type = type;
         this.name = name;
+        this.runLimit = runLimit;
+        this.swimLimit = swimLimit;
     }
 
     public void setName(String name) {

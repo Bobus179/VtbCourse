@@ -1,21 +1,18 @@
-import Animals.Animal;
-import Animals.Cat;
-import Animals.Dog;
-import Animals.Tiger;
+import Animals.*;
 
 public class AnimalApp {
     public static void main(String[] args) {
 
         Animal[] animals = new Animal[]{
-                new Cat("Barsik"),
-                new Cat("Loki"),
-                new Cat("Tihe"),
-                new Dog("Sharik"),
-                new Dog("Tusik"),
-                new Dog("Drugok"),
-                new Tiger("Hunger"),
-                new Tiger("Pestilence"),
-                new Tiger("War")
+                new HomeCat("Barsik",100,0),
+                new HomeCat("Loki",150,0),
+                new HomeCat("Tihe",120,0),
+                new Dog("Sharik",200,100),
+                new Dog("Tusik",250,120),
+                new Dog("Drugok",180,80),
+                new Tiger("Hunger",1000,300),
+                new Tiger("Pestilence",1500,500),
+                new Tiger("War",1200,400)
         };
 
         for (int i=0;i<animals.length;i++){
