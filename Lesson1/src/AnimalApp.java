@@ -5,6 +5,7 @@ import Animals.Tiger;
 
 public class AnimalApp {
     public static void main(String[] args) {
+
         Animal[] animals = new Animal[]{
                 new Cat("Barsik"),
                 new Cat("Loki"),
@@ -20,10 +21,10 @@ public class AnimalApp {
         for (int i=0;i<animals.length;i++){
             int distance = (int)(Math.random()*200);
             if (i%2==0){
-                System.out.print(": The animal tries to run and ");
+                System.out.print("The "+ animals[i].getType()+" "+ animals[i].getName() + " tries to run and ");
                 animals[i].run(distance);
             }else {
-                System.out.print(": The animal tries to swim and ");
+                System.out.print("The "+ animals[i].getType()+" "+ animals[i].getName() + " tries to swim and ");
                 animals[i].swim(distance);
             }
         }

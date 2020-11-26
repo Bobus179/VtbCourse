@@ -6,15 +6,14 @@ public class Tiger extends Animal {
     {
         runLimit=1000;
         swimLimit=300;
-        canSwim=true;
     }
+
     public Tiger(String name) {
-        super(name);
+        super("Tiger", name);
         count++;
     }
 
-    @Override
-    public void info() {
+    public static void counts() {
         System.out.println("All tigers are: "+count);
     }
 }

@@ -5,22 +5,12 @@ public class Cat extends Animal{
     static int count;
     {
         runLimit=200;
-        canSwim=false;
+        swimLimit=0;
     }
 
     public Cat(String name) {
-        super(name);
+        super("Cat", name);
         count++;
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
-
-    @Override
-    public void info() {
-        System.out.println("Cat's name is: "+name);
     }
 
     public static void counts(){
