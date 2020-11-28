@@ -1,12 +1,12 @@
 package org.nazarov.lesson2.competitors;
 
-import org.nazarov.lesson2.interfaces.Movable;
+import org.nazarov.lesson2.interfaces.Sportsmen;
 
-public class Cat implements Movable {
+public class Cat implements Sportsmen {
 
     private final int heightLimit;
     private final int lengthLimit;
-    private boolean leftTheRace;
+    private boolean iAmInPlay = true;
     private static int count=1;
     private final int thisCount=count;
 
@@ -15,24 +15,27 @@ public class Cat implements Movable {
         this.lengthLimit = lengthLimit;
         count++;
     }
-
-    public boolean isLeftTheRace() {
-        return leftTheRace;
+    @Override
+    public int canJump() {
+        return heightLimit;
     }
 
-    public void jump(int height) {
-        if (height>this.heightLimit) {
-            leftTheRace = true;
-            System.out.println("Кот под номером " + thisCount + " покинул гонку.");
-        }else System.out.println("Кот под номером " + thisCount + " перепрынул стену.");
+    @Override
+    public int canRun() {
+        return lengthLimit;
     }
 
-    public void run(int length) {
-        if (length>this.lengthLimit) {
-            leftTheRace = true;
-            System.out.println("Кот под номером " + thisCount + " покинул гонку.");
-        }else System.out.println("Кот под номером " + thisCount + " пробежал дистанцию.");
+    @Override
+    public boolean iPlay() {
+        return iAmInPlay;
     }
 
-
+    @Override
+    public void lose() {
+        iAmInPlay=false;
+    }
+    @Override
+    public String toString() {
+        return "Cat " + thisCount +" ";
+    }
 }

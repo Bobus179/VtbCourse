@@ -1,6 +1,10 @@
 package org.nazarov.lesson2.obstacles;
 
-public class Treadmill extends Obstacle {
+import org.nazarov.lesson2.interfaces.Obstacle;
+import org.nazarov.lesson2.interfaces.Sportsmen;
+
+public class Treadmill implements  Obstacle {
+    Sportsmen sportsmen;
     static private int count;
     private int length;
 
@@ -14,8 +18,14 @@ public class Treadmill extends Obstacle {
         count++;
     }
 
-    public int getLength() {
-        return length;
+    @Override
+    public void overcome(Sportsmen sportsmen) {
+        this.sportsmen = sportsmen;
+        if (length>sportsmen.canRun()){
+            System.out.println(sportsmen.toString() + " не смог преодолеть дорожку № " + count);
+            sportsmen.lose();
+        }else System.out.println(sportsmen.toString() + " пробежал дорожку № " + count);
+
     }
 
 }
