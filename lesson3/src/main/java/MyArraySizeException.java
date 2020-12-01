@@ -1,5 +1,5 @@
-public class MyArraySizeException extends RuntimeException{
+public class MyArraySizeException extends MyException{
     public MyArraySizeException(){
-        System.out.println("Неверный размер массива.");
+        super("Неверный размер массива.");
     }
 }
