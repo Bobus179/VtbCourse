@@ -62,12 +62,11 @@ public class AppMain {
     }
 
     public static <T>List <T> toMyList(T[]o){
+
         return  Arrays.asList(o);
     }
 
     public static <T>ArrayList<T>toMyArray(T[]o){
-        ArrayList <T> list = new ArrayList<>(o.length);
-        list.addAll(Arrays.asList(o));
-        return list;
+        return new ArrayList<>(Arrays.asList(o));
     }
 }
