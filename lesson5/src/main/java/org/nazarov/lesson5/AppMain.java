@@ -18,8 +18,8 @@ public class AppMain {
             } else count = map.get(s);
             map.put(s, ++count);
         }
-        for (String s: map.keySet() ) {
-            System.out.println(s + " : " + map.get(s));
+        for (Map.Entry<String,Integer> entry: map.entrySet() ) {
+            System.out.println(entry);
         }
     }
 }
